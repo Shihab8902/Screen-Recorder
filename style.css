@@ -8,6 +8,8 @@
 body {
     height: 100vh;
     overflow: hidden;
+    background-color: #000000;
+    font-family: "VT323", monospace;
 }
 
 .previews {
@@ -31,11 +33,11 @@ body {
 }
 
 .label {
-    font-family: monospace;
     margin: 0 0 12px 0;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 2px;
+    color: #00FF00;
 }
 
 
@@ -43,5 +45,38 @@ body {
 /* Control button styles */
 .buttons {
     position: absolute;
-    bottom: 20px;
+    bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#startButton,
+#stopButton,
+#downloadButton {
+    background-color: #55FF55;
+    font-family: "VT323", monospace;
+    border: none;
+    padding: 14px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+#stopButton {
+    background-color: #fa3a3a;
+    color: #000;
+}
+
+#downloadButton {
+    background-color: #5555FF;
+
+}
+
+#downloadButton a {
+    color: #000;
+    text-decoration: none;
 }
