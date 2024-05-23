@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="previews">
+        <!-- Live Preview Window -->
+        <div class="window-container">
+            <h3 class="label">Live Feed</h3>
+            <video class="window" autoplay muted controls></video>
+        </div>
+
+        <!-- Output preview Window -->
+        <div class="window-container">
+            <h3 class="label">Output</h3>
+            <video class="window" autoplay controls></video>
+        </div>
+    </div>
+
+
+    <!-- Controls -->
+    <div class="buttons">
+        <button id="startButton">Start Recording</button>
+        <button id="stopButton">Stop Recording</button>
+        <button id="downloadButton"><a href="#" download="Recording.mp4"">Download</a></button>
+    </div>
+
+
+</body>
+
+</html>
