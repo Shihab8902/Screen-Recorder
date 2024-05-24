@@ -54,11 +54,12 @@ body {
 
 #startButton,
 #stopButton,
-#downloadButton {
+#downloadButton,
+#reloadButton {
     background-color: #55FF55;
     font-family: "VT323", monospace;
     border: none;
-    padding: 14px 20px;
+    padding: 8px 20px;
     cursor: pointer;
     border-radius: 6px;
     font-weight: 500;
@@ -71,12 +72,42 @@ body {
     color: #000;
 }
 
+#stopButton:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+#downloadButton:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+#startButton:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    color: black;
+}
+
 #downloadButton {
     background-color: #5555FF;
+    height: 100%;
 
 }
 
 #downloadButton a {
     color: #000;
     text-decoration: none;
+    height: 100%;
+}
+
+#reloadButton {
+    background-color: transparent;
+    font-size: 20px;
+    padding: 3px 20px;
+    background-color: #fa603a;
+}
+
+
+.hidden {
+    display: none;
 }

@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screen Recorder</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/4553/4553902.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="./script.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
 </head>
 
 <body>
@@ -18,13 +21,13 @@
         <!-- Live Preview Window -->
         <div class="window-container">
             <h3 class="label">Live Feed</h3>
-            <video class="window" autoplay muted controls></video>
+            <video class="window" id="liveWindow" autoplay muted controls></video>
         </div>
 
         <!-- Output preview Window -->
         <div class="window-container">
             <h3 class="label">Output</h3>
-            <video class="window" autoplay controls></video>
+            <video class="window" id="previewWindow" autoplay controls></video>
         </div>
     </div>
 
@@ -32,9 +35,13 @@
     <!-- Controls -->
     <div class="buttons">
         <button id="startButton">Start Recording</button>
-        <button id="stopButton">Stop Recording</button>
-        <button id="downloadButton"><a href="#" download="Recording.mp4"">Download</a></button>
+        <button disabled id="stopButton">Stop Recording</button>
+        <a id="downloader" href="#" download="Recording.mp4"">
+            <button disabled id='downloadButton'>Download</button>
+        </a>
+        <button class=" hidden" id='reloadButton'>↻</button>
     </div>
+
 
 
 </body>
